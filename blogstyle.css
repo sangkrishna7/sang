@@ -93,3 +93,6 @@ header h1{
   line-height: 1.5;
   font-weight: normal; 
 }
+body{
+    background: url("bg.jpg") repeat center center;
+}
