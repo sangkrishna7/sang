@@ -65,6 +65,7 @@ header h1{
 .grid-item.dhoni {
     background: url("msd.webp") no-repeat center center;
     background-size: cover;
+    grid-template: auto;
 }
 .grid-item.bumrah {
     background: url("bumrah.jpg") no-repeat center center;
