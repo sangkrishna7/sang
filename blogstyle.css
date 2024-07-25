@@ -86,7 +86,7 @@ header h1{
   font-weight: bold;
   font-size: larger;
   letter-spacing: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
 }
 .normal-text {
   font-size: 16px; 
