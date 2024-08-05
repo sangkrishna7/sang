@@ -1,99 +1,110 @@
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    height: auto;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  height: auto;
 }
+
 .container {
-    width: 85%;
-    margin: 0 auto;
-    overflow: hidden;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
 }
+
 header {
-    background: #0d0c0c;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #000000 3px solid;
+  background: #0d0c0c;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #000000 3px solid;
+  padding-left: 20pt;
+  padding-right: 20pt;
+  margin: 0 auto; 
+  box-sizing: border-box; 
 }
-header h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+header h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
 }
 
 .grid {
-    display: grid;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 0px;
+  display: grid;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0px;
 }
+
 .grid-item {
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    text-align: center;
-    color: #fff;
-    position: relative;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  background-size: cover;
+  background-position: center;
 }
+
 .grid-item:hover {
-    transform: scale(1.07);
+  transform: scale(1.07);
 }
+
 .grid-item a {
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    z-index: 1;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
 }
-.grid-item h2,
-.grid-item p {
-    background: rgba(205, 24, 24, 0);
-    display: inline-block;
-    padding: 65px;
-    color: black;
-    text-align: center;
-    margin: 0;
-    font-weight: 300;
+
+.grid-item h2, .grid-item p {
+  background: rgba(205, 24, 24, 0);
+  display: inline-block;
+  padding: 65px;
+  color: black;
+  text-align: center;
+  margin: 0;
+  font-weight: 300;
 }
-.grid-item.messi {
-    background: url("messi-world-cup.jpg") no-repeat center center;
-    background-size: cover;
-    height: auto;
+
+.para {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 40px;
 }
-.grid-item.dhoni {
-    background: url("msd.webp") no-repeat center center;
-    background-size: cover;
-    grid-template: auto;
-}
-.grid-item.bumrah {
-    background: url("bumrah.jpg") no-repeat center center;
-    background-size: cover;
-   grid-template: auto;
-}
-.para{
-    font-family: 'Brush Script MT', cursive;
-    font-size: 40px;
-}
-.container.grid h2 p{
+
+.container.grid h2 p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.grid-item h2{
+
+.grid-item h2 {
   color: rgb(255, 255, 255);
 }
-.grid-item p{
+
+.grid-item p {
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: larger;
   letter-spacing: 4px;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
 }
+
 .normal-text {
   font-size: 16px; 
   line-height: 1.5;
   font-weight: normal; 
 }
-body{
-    background: url("bg.jpg") repeat center center;
+
+section {
+  margin-top: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
