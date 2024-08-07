@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -107,4 +107,19 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid-item {
+    margin: 10px auto;
+  }
 }
