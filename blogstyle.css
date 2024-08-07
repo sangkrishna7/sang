@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background: #0d0c0c; /* Original header background */
+  background: #0d0c0c;
   color: #fff;
   padding-top: 30px;
   min-height: 70px;
@@ -59,7 +59,7 @@ header p.para {
 }
 
 .grid-item:hover {
-  transform: scale(1.07);
+  transform: scale(1.056);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -99,9 +99,18 @@ section {
 
 section h2 {
   font-size: 28px;
-  border-bottom: 2px solid #ddd;
   padding-bottom: 10px;
   margin-bottom: 20px;
+}
+
+#detailed-summary {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+#summary-title {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
 }
 
 section p, section ul {
@@ -145,15 +154,121 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Media Queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  header p.para {
+    font-size: 30px;
+  }
 }
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  header p.para {
+    font-size: 28px;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  .grid-item h2 {
+    font-size: 20px;
+  }
+
+  .grid-item p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 777px) and (max-width: 930px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto;
+  }
+
+  .grid-item:nth-child(3n) {
+    grid-column: span 2;
+  }
+
+  header h1 {
+    font-size: 32px; 
+  }
+
+  header p.para {
+    font-size: 28px; 
+  }
+
+  section h2 {
+    font-size: 24px; 
+  }
+
+  .grid-item h2 {
+    font-size: 20px; 
+  }
+
+  .grid-item p {
+    font-size: 14px; 
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  header p.para {
+    font-size: 24px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  .grid-item h2 {
+    font-size: 18px;
+  }
+
+  .grid-item p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p.para {
+    font-size: 20px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  .grid-item h2 {
+    font-size: 16px;
+  }
+
+  .grid-item p {
+    font-size: 10px;
   }
 }
