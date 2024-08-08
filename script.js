@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     { id: "Bumrah", summary: lines[17] }
                 ]
             };
-            
+
             const header = document.createElement('header');
             const h1 = document.createElement('h1');
             h1.textContent = 'Welcome to My Blog';
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             header.appendChild(h1);
             header.appendChild(pHeader);
             document.getElementById('header-content').appendChild(header);
-          
+
             const gridContainer = document.createElement('div');
             gridContainer.className = 'grid';
             gridItems.forEach(item => {
@@ -38,18 +38,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 gridItem.className = 'grid-item';
                 gridItem.id = `${item.id}-item`;
                 gridItem.style.backgroundImage = item.background;
-  
+
                 const a = document.createElement('a');
                 a.href = `#${item.id}`;
-  
+                a.className = 'grid-link';
+
                 const h2 = document.createElement('h2');
                 h2.id = `${item.id}-title`;
                 h2.textContent = item.title;
-  
+
                 const p = document.createElement('p');
                 p.id = `${item.id}-description`;
                 p.textContent = item.description;
-  
+
                 a.appendChild(h2);
                 a.appendChild(p);
                 gridItem.appendChild(a);
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
             aboutSection.appendChild(summaryDescription);
             aboutSection.appendChild(summaryList);
             document.getElementById('about-grids').appendChild(aboutSection);
-  
+
             const additionalInfoSection = document.createElement('section');
             const detailedSummaryTitle = document.createElement('h2');
             detailedSummaryTitle.id = 'detailed-summary';
@@ -99,23 +100,33 @@ document.addEventListener("DOMContentLoaded", function() {
                 additionalInfoSection.appendChild(itemDescription);
             });
             document.getElementById('additional-info').appendChild(additionalInfoSection);
-  
+
             const footer = document.createElement('footer');
             const footerPara1 = document.createElement('p');
             const footerLink1 = document.createElement('a');
             footerLink1.href = '#about-grids';
             footerLink1.textContent = 'Back to Legends of the Game';
             footerPara1.appendChild(footerLink1);
-  
+
             const footerPara2 = document.createElement('p');
             const footerLink2 = document.createElement('a');
             footerLink2.href = '#additional-info';
             footerLink2.textContent = 'Back to Detailed Summary';
             footerPara2.appendChild(footerLink2);
-  
+
             footer.appendChild(footerPara1);
             footer.appendChild(footerPara2);
             document.getElementById('footer-content').appendChild(footer);
+
+            document.querySelectorAll('.grid-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1); 
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
         });
-  });
-  
+});
